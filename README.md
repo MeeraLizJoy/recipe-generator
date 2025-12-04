@@ -1,47 +1,55 @@
+You can paste this directly into your `README.md`:
+
+```markdown
+## Project Structure
+
+```
 recipe-generator/
 ├── .env.template
 ├── README.md
-├── requirements.txt      # For Python packages
-├── package.json          # For managing the whole project's scripts
-├── backend/              # Python with FastAPI or Flask
-└── frontend/             # React, Next.js, or simple HTML/CSS/JS
+├── requirements.txt          # For Python packages
+├── package.json              # For managing the whole project's scripts
+├── backend/                  # Python with FastAPI
+└── frontend/                 # React + Vite
+```
 
-
-
+```
 backend/
 ├── app/
 │   ├── __init__.py
-│   ├── main.py                   # The main FastAPI application instance
+│   ├── main.py               # The main FastAPI application instance
 │   ├── api/
 │   │   ├── __init__.py
 │   │   └── endpoints/
-│   │       └── recipe.py         # Defines the /generate-recipe endpoint
+│   │       └── recipe.py     # Defines the /generate-recipe endpoint
 │   ├── services/
-│   │   └── genai_service.py      # Contains the GenAI API call logic
+│   │   └── genai_service.py  # Contains the GenAI API call logic
 │   └── models/
-│       └── recipe_model.py       # Pydantic models for API request/response
-├── .env                          # Holds the actual API keys (ignore in Git)
-└── venv/                         # A virtual environment for dependencies
+│       └── recipe_model.py   # Pydantic models for API request/response
+├── .env                      # Holds the actual API keys (ignored in Git)
+└── venv/                     # Python virtual environment for dependencies
+```
 
-
-
+```
 frontend/
 ├── public/
-│   └── index.html              # The main HTML file
+│   └── index.html            # The main HTML file
 ├── src/
 │   ├── assets/
-│   │   └── logo.svg            # Static files like images and icons
+│   │   └── logo.svg          # Static files like images and icons
 │   ├── components/
-│   │   ├── GeneratorForm.jsx   # Form for user inputs
-│   │   ├── RecipeDisplay.jsx   # Component to display the generated recipe
-│   │   └── LoadingSpinner.jsx  # Shows while the recipe is being generated
+│   │   ├── GeneratorForm.jsx     # Form for user inputs
+│   │   ├── RecipeDisplay.jsx     # Displays the generated recipe
+│   │   └── LoadingSpinner.jsx    # Shows while the recipe is being generated
 │   ├── api/
-│   │   └── recipeApi.js        # Functions for making API requests to the backend
-│   ├── App.jsx                 # The root React component
-│   ├── main.jsx                # Renders the App component
-│   └── styles.css              # Global styles
-├── .env                          # Environment variables for the frontend
-└── package.json     
+│   │   └── recipeApi.js      # Functions for making API requests to the backend
+│   ├── App.jsx               # The root React component
+│   ├── main.jsx              # Renders the App component
+│   └── styles.css            # Global styles
+├── .env                      # Frontend environment variables
+└── package.json
+```
+```    
 
 
 
