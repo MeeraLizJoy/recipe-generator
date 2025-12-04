@@ -1,60 +1,3 @@
-You can paste this directly into your `README.md`:
-
-```markdown
-## Project Structure
-
-```
-recipe-generator/
-├── .env.template
-├── README.md
-├── requirements.txt          # For Python packages
-├── package.json              # For managing the whole project's scripts
-├── backend/                  # Python with FastAPI
-└── frontend/                 # React + Vite
-```
-
-```
-backend/
-├── app/
-│   ├── __init__.py
-│   ├── main.py               # The main FastAPI application instance
-│   ├── api/
-│   │   ├── __init__.py
-│   │   └── endpoints/
-│   │       └── recipe.py     # Defines the /generate-recipe endpoint
-│   ├── services/
-│   │   └── genai_service.py  # Contains the GenAI API call logic
-│   └── models/
-│       └── recipe_model.py   # Pydantic models for API request/response
-├── .env                      # Holds the actual API keys (ignored in Git)
-└── venv/                     # Python virtual environment for dependencies
-```
-
-```
-frontend/
-├── public/
-│   └── index.html            # The main HTML file
-├── src/
-│   ├── assets/
-│   │   └── logo.svg          # Static files like images and icons
-│   ├── components/
-│   │   ├── GeneratorForm.jsx     # Form for user inputs
-│   │   ├── RecipeDisplay.jsx     # Displays the generated recipe
-│   │   └── LoadingSpinner.jsx    # Shows while the recipe is being generated
-│   ├── api/
-│   │   └── recipeApi.js      # Functions for making API requests to the backend
-│   ├── App.jsx               # The root React component
-│   ├── main.jsx              # Renders the App component
-│   └── styles.css            # Global styles
-├── .env                      # Frontend environment variables
-└── package.json
-```
-```    
-
-
-
-
-
 # GenAI Recipe Generator
 
 A full-stack web application to generate personalized recipes using Google Gemini AI, featuring user authentication and saved recipe management via Firebase.
@@ -166,34 +109,52 @@ npm run dev
 
 ## Project Structure
 
+```
+recipe-generator/
+├── .env.template
+├── README.md
+├── requirements.txt          # For Python packages
+├── package.json              # For managing the whole project's scripts
+├── backend/                  # Python with FastAPI
+└── frontend/                 # React + Vite
+```
+
+```
 backend/
-app/
-api/
-endpoints/
-recipe.py # FastAPI route for recipe generation
-models/
-recipe_model.py # Pydantic model for input validation
-services/
-genai_service.py # Gemini AI recipe generation logic
-main.py # FastAPI app setup including CORS and routing
+├── app/
+│   ├── __init__.py
+│   ├── main.py               # The main FastAPI application instance
+│   ├── api/
+│   │   ├── __init__.py
+│   │   └── endpoints/
+│   │       └── recipe.py     # Defines the /generate-recipe endpoint
+│   ├── services/
+│   │   └── genai_service.py  # Contains the GenAI API call logic
+│   └── models/
+│       └── recipe_model.py   # Pydantic models for API request/response
+├── .env                      # Holds the actual API keys (ignored in Git)
+└── venv/                     # Python virtual environment for dependencies
+```
 
+```
 frontend/
-src/
-api/
-recipe-Api.js # API calls to backend recipe endpoint
-components/
-GeneratorForm.jsx # Form for recipe parameters input
-LandingPage.jsx # Login/signup and guest access landing UI
-LoadingSpinner.jsx # Loading indicator component
-RecipeDisplay.jsx # Renders AI-generated Markdown recipe output
-SavedRecipesSidePanel.jsx # Hoverable side panel for saved recipes
-utils/
-databaseHelpers.js # Firebase operations for saving/loading recipes
-firebase.js # Firebase SDK initialization and config
-App.jsx # Main React component orchestrating auth, state & UI
-
-.env # Sensitive keys and config (excluded from repo)
-
+├── public/
+│   └── index.html            # The main HTML file
+├── src/
+│   ├── assets/
+│   │   └── logo.svg          # Static files like images and icons
+│   ├── components/
+│   │   ├── GeneratorForm.jsx     # Form for user inputs
+│   │   ├── RecipeDisplay.jsx     # Displays the generated recipe
+│   │   └── LoadingSpinner.jsx    # Shows while the recipe is being generated
+│   ├── api/
+│   │   └── recipeApi.js      # Functions for making API requests to the backend
+│   ├── App.jsx               # The root React component
+│   ├── main.jsx              # Renders the App component
+│   └── styles.css            # Global styles
+├── .env                      # Frontend environment variables
+└── package.json
+```  
 
 
 ---
