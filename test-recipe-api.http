@@ -1,0 +1,9 @@
+POST http://127.0.0.1:8000/api/generate-recipe 
+Content-Type: application/json
+
+{
+  "ingredients": "chicken, onions, carrots",
+  "cuisine": "Indian",
+  "difficulty": "Medium",
+  "cooking_time": 45
+}

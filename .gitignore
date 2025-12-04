@@ -1,0 +1,42 @@
+# ---- Node / frontend ----
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# ---- Python / backend ----
+# Virtual environments
+venv/
+.env/
+.env.* 
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+
+# ---- Logs ----
+logs/
+*.log
+
+# ---- OS / editor junk ----
+.DS_Store
+Thumbs.db
+
+# VSCode / JetBrains (if you don’t want to track them globally)
+.vscode/
+.idea/
+
+# ---- Misc generated ----
+dist/
+
+
+notes.md
+react.md
